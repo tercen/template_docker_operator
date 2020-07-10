@@ -3,12 +3,12 @@ FROM tercen/dartrusttidy:1.0.7
 USER root
 WORKDIR /operator
 
-RUN git clone https://github.com/tercen/shiny_operator2.git
+RUN git clone https://github.com/tercen/OPERATOR_NAME.git
 
-WORKDIR /operator/shiny_operator2
+WORKDIR /operator/OPERATOR_NAME
 
-RUN echo 0.10.0 && git pull
-RUN git checkout 0.10.0
+RUN echo X.X.X && git pull
+RUN git checkout X.X.X
 
 RUN R -e "renv::restore(confirm=FALSE)"
 
